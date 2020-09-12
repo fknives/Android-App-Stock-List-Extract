@@ -4,6 +4,11 @@ Simple App to extract the list of ticker symbols from R
 ## IF you need only the file: last updated at 2020.09.11
 file: [stock_list_1599869417144.csv](https://github.com/fknives/Stock-List-Extract-Android/blob/dev/stock_list_1599869417144.csv)
 
+## Setup:
+- create a config.gradle file
+- give the needed resource ids. you may figure it out with the syncservice
+- I don't want them to be in the repo, I don't know if it would cause any trouble
+
 ## Usage:
 - install the application on your phone
 - Start the application
