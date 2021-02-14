@@ -1,14 +1,16 @@
 <resources>
     <string name="app_name">RStockList</string>
     <string name="app_usage_description">
-        This is a simple app to load all the stock tickers from Rev.\n
-        Clicking on the "Start Service" button will first navigate you to settings. You need to activate this app\'s AccessibilityService.
-        Next clicking the "Start Service" button will show a notification, then you need to navigate to Rev to the list of stocks.\n
-        At that point you should click Start Loading. Now the it will start to sync the data from Rev.\n
-        You should leave your phone for a few minutes.\n
-        When the sync finished the notification disappears and data is saved into a csv file.\n
-        You may use that file to import into Google Sheet or other platform where you want to verify and filter that data.\n
-        This file sharing is done from this screen, the tickers will be also shown\n
+This is a simple app to load all the stock tickers from Rev.\n
+- Clicking on the "Start Service" button will first navigate you to settings. You need to activate this app\'s AccessibilityService (Downloaded Services).
+- Next clicking the "Start Service" button will show a notification.
+- If the notification doesn\'t show but the settings is opened again, there is some caching issue, forstop the application and retry.\n
+- You need to navigate to Rev to the list of all stocks.\n
+- At that point you should click Start Loading. Now the it will start to sync the data from Rev.\n
+- You should leave your phone for a few minutes.\n
+When the sync finished the notification disappears and data is saved into a csv file.\n
+You may use that file to import into Google Sheet or other platform where you want to verify and filter that data.\n
+This file sharing is done from this screen, the tickers will be also shown below\n
     </string>
     <string name="start_service_cta">Start Service</string>
     <string name="file_last_updated_at">File last updated at: %s</string>

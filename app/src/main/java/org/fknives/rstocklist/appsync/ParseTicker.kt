@@ -11,6 +11,9 @@ class ParseTicker {
                 .firstOrNull()
                 ?.text
                 ?.toString()
+                ?.split("·")
+                ?.firstOrNull()
+                ?.trim()
         } else {
             null
         }

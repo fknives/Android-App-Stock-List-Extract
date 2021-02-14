@@ -1,8 +1,8 @@
 # Stock-List-Extract-Android
 Simple App to extract the list of ticker symbols from R
 
-## IF you need only the file: last updated at 2020.10.13
-file: [stock_list_1599869417144.csv](https://github.com/fknives/Stock-List-Extract-Android/blob/dev/stock_list_1599869417144.csv)
+## IF you need only the file: last updated at 2021.02.14
+file: [stock_list_1613311888669.csv](https://github.com/fknives/Stock-List-Extract-Android/blob/dev/stock_list_1613311888669.csv)
 
 ## Setup:
 - create a config.gradle file
@@ -13,9 +13,9 @@ file: [stock_list_1599869417144.csv](https://github.com/fknives/Stock-List-Extra
 - install the application on your phone
 - Start the application
 - Click on Start Service
-- Enable Accessibility Service
+- Enable Accessibility Service (Downloaded Services)
 - Click on Start Service again
-- Notice a notification is shown
+- Notice a notification is shown (if not force stop the app and start from point 2)
 - Navigate to R All Stocks List
 - Tap on the Notification
 - Notice the app starts to load from the screen (the notification is updated)
