@@ -1,8 +1,8 @@
 # Stock-List-Extract-Android
-Simple App to extract the list of ticker symbols from R
+Simple App to extract the list of ticker symbols from Revolut
 
-## IF you need only the file: last updated at 2021.04.30
-file: [stock_list_1619815053454.csv](https://github.com/fknives/Stock-List-Extract-Android/blob/dev/stock_list_1619815053454.csv)
+## IF you need only the file: last updated at 2021.05.18
+file: [stock_list_1621365056743.csv](https://github.com/fknives/Stock-List-Extract-Android/blob/dev/stock_list_1621365056743.csv)
 
 ## Setup:
 - create a config.gradle file
