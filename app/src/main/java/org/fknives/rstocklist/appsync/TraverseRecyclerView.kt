@@ -32,13 +32,16 @@ abstract class TraverseRecyclerView(private var index: Int) {
                 }
             }
             else -> {
-                index++
-                found(found)
+                if (found(found)) {
+                    index++
+                } else {
+                    recyclerView.scrollBackward()
+                }
             }
         }
     }
 
-    protected abstract fun found(accessibilityNodeInfo: AccessibilityNodeInfo)
+    protected abstract fun found(accessibilityNodeInfo: AccessibilityNodeInfo): Boolean
 
     protected abstract fun finished()
 

@@ -24,10 +24,23 @@ class SyncService : AccessibilityService() {
                 syncState = SyncState.WORKING
                 traverseRecyclerView = object : TraverseRecyclerView(0) {
                     val tickers = mutableListOf<String>()
+                    var foundRetried = 0
 
-                    override fun found(accessibilityNodeInfo: AccessibilityNodeInfo) {
-                        parseTicker(accessibilityNodeInfo)?.let(tickers::add)
-                        listener?.onItemProcessed(tickers.size - 1)
+                    override fun found(accessibilityNodeInfo: AccessibilityNodeInfo): Boolean {
+                        val ticker = parseTicker(accessibilityNodeInfo)
+                        ticker?.let(tickers::add)
+                        if (ticker == null) {
+                            foundRetried++
+                        } else {
+                            foundRetried = 0
+                            tickers.add(ticker)
+                            listener?.onItemProcessed(tickers.size - 1)
+                        }
+                        if (foundRetried == 10) {
+                            foundRetried = 0
+                            return true
+                        }
+                        return ticker != null
                     }
 
                     override fun finished() {

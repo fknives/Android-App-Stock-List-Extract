@@ -15,6 +15,7 @@ class ParseTicker {
                 ?.firstOrNull()
                 ?.trim()
         } else {
+            System.err.println("couldnt process item: ${accessibilityNodeInfo.findAccessibilityNodeInfosByViewId(BuildConfig.CONFIG_COMPANY_TICKER_ID).map(AccessibilityNodeInfo::getText)}")
             null
         }
 
@@ -26,8 +27,7 @@ class ParseTicker {
             BuildConfig.CONFIG_COMPANY_IMG_ID,
             BuildConfig.CONFIG_COMPANY_NAME_ID,
             BuildConfig.CONFIG_COMPANY_TICKER_ID,
-            BuildConfig.CONFIG_COMPANY_SHARE_PRICE_ID,
-            BuildConfig.CONFIG_COMPANY_CHANGE_PERCENT_ID
+            BuildConfig.CONFIG_COMPANY_SHARE_PRICE_ID
         )
 
 
