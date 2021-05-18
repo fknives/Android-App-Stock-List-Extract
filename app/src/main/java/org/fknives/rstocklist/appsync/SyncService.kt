@@ -3,6 +3,7 @@ package org.fknives.rstocklist.appsync
 import android.accessibilityservice.AccessibilityService
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
+import android.widget.Toast
 import org.fknives.rstocklist.BuildConfig
 
 class SyncService : AccessibilityService() {
@@ -38,6 +39,7 @@ class SyncService : AccessibilityService() {
                         }
                         if (foundRetried == 10) {
                             foundRetried = 0
+                            Toast.makeText( this@SyncService, "One of the items couldn't be parsed, check logs", Toast.LENGTH_LONG).show()
                             return true
                         }
                         return ticker != null
