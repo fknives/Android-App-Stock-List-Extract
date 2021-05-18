@@ -47,7 +47,7 @@ class SyncService : AccessibilityService() {
 
                     override fun finished() {
                         syncState = SyncState.NOT_STARTED
-                        listener?.onItemProcessingFinished(tickers)
+                        listener?.onItemProcessingFinished(tickers.sorted())
                     }
 
                 }
